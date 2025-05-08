@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				movie: {
+					primary: '#2E1065',
+					secondary: '#EC4899',
+					accent: '#8B5CF6',
+					light: '#F3E8FF',
+					dark: '#1E1B4B',
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'card-swipe-right': {
+					from: { transform: 'translateX(0) rotate(0deg)', opacity: '1' },
+					to: { transform: 'translateX(150%) rotate(30deg)', opacity: '0' }
+				},
+				'card-swipe-left': {
+					from: { transform: 'translateX(0) rotate(0deg)', opacity: '1' },
+					to: { transform: 'translateX(-150%) rotate(-30deg)', opacity: '0' }
+				},
+				'card-enter': {
+					from: { transform: 'translateY(20px)', opacity: '0' },
+					to: { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'card-swipe-right': 'card-swipe-right 0.5s forwards ease-out',
+				'card-swipe-left': 'card-swipe-left 0.5s forwards ease-out',
+				'card-enter': 'card-enter 0.3s forwards ease-out',
 			}
 		}
 	},
